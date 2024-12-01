@@ -1,0 +1,523 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "062fe6a7-9c85-4ce1-ba72-141451d4995e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "title: 'Лабораторна робота №3. Змінні. Базові операції вводу/виводу' description: Документ зроблено за допомогою Quarto author: \"© [Мардєєва Діана], 2024\" date: \"01.12.2024\" lang: ukr format: html: code-fold: true toc: true # меню toc_float: # спливаюче меню\n",
+    "collapsed: true # авто number_sections: true jupyter: python3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c05076b5-5d39-4c08-afc2-e6ea0251e042",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "__Мета:__ _освоїти роботу зі змінними та операції вводу і виводу_"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "40f0dad8-6abc-426a-8d3b-cc71eb350443",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## Робота зі змінними"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "631d1b96-663c-4c4e-89cb-adac8333cc6b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Приклад\n",
+    "Написати програму, яка вводить довжини катетів a та b прямокутного трикутника та обчислює його гіпотенузу c."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6bf29156-9ee9-4118-9df3-f3ee9653f1c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 3.0\n",
+    "b = 4.0\n",
+    "c = (a ** 2 + b ** 2) ** 0.5\n",
+    "print(\"c =\", c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "215133f2-bebe-46e8-93c6-da5915006d02",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c = 5.0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e2f568f5-7823-4420-a6f8-cea281f54da3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 1\n",
+    "Написати програму, яка обчислює значення функції Гауса:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "853a1997-5702-41e9-900b-92a2a64198cc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "def gaussian(x, mu, sigma):\n",
+    "    return (1 / (sigma * math.sqrt(2 * math.pi))) * math.exp(-0.5 * ((x - mu) / sigma) ** 2)\n",
+    "x = 1.0\n",
+    "mu = 0.0\n",
+    "sigma = 1.0\n",
+    "result = gaussian(x, mu, sigma)\n",
+    "print(f\"Результат функції Гауса: {result}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "46d25131-10fb-4854-b862-13b0e063f21a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "0.24197072451914337"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d9444ad6-f03e-4975-bd21-71597f133417",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 2\n",
+    "Ось невелика розповідь:\n",
+    "\n",
+    "Якось Джон (John) мав три яблука, Мері (Mary) мала п’ять яблук, а Адам (Adam) мав шість яблук. Усі вони були дуже щасливі та жили довго. Кінець історії.\n",
+    "\n",
+    "Ваше завдання:\n",
+    "\n",
+    "створіть змінні: john, mary, і adam;\n",
+    "\n",
+    "надайте значення змінним. Значення повинні дорівнювати кількості фруктів, якими володіють Джон, Мері, і Адам відповідно;\n",
+    "\n",
+    "зберігши числа в змінних, виведіть змінні в один рядок і розділіть їх комами;\n",
+    "\n",
+    "тепер створіть нову змінну з ім’ям totalApple, що дорівнює сумі трьох попередніх змінних;\n",
+    "\n",
+    "вивести значення, збережене в totalapples, в консоль;\n",
+    "\n",
+    "надрукувати рядок та ціле число разом в одному рядку, наприклад, “Загальна кількість яблук:” та total_apples|."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a6e593cd-7b72-4d2e-9b02-f94d706ee094",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "john = 3\n",
+    "mary = 5\n",
+    "adam = 6\n",
+    "totalapple = john + mary + adam\n",
+    "print(john,\",\",mary,\",\",adam)\n",
+    "print(\"Загальна кількість яблук =\",totalapple)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "20209c67-9bed-44e8-ad3b-2c9eabcb5b9b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "14"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ec455d31-407d-49e0-8a7c-1a7465d5a95f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 3\n",
+    "Милі та кілометри – це одиниці довжини або відстані.\n",
+    "\n",
+    "Враховуючи, що 1 миля дорівнює приблизно 1.61 кілометрам, напишіть програму, щоб вона перетворила:\n",
+    "\n",
+    "- милі у кілометри;\n",
+    "\n",
+    "- кілометри на милі.\n",
+    "\n",
+    "Не змінюйте нічого в існуючому коді. Напишіть свій код у місцях, вказаних ###. Протестуйте вашу програму з даними, які надано у вихідному коді.\n",
+    "\n",
+    "Зверніть особливу увагу на те, що відбувається всередині функції print(). Проаналізуйте, як ми надаємо кілька аргументів функції та як ми виводимо очікувані дані.\n",
+    "\n",
+    "Зауважте, що деякі аргументи всередині функції print() є рядками (наприклад, \"miles is\", тоді як деякі інші є змінними (наприклад, miles)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ff8469ba-976f-4dd7-87f7-20ebb932749c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "kilometers = 12.25\n",
+    "miles = 7.38\n",
+    "miles_to_kilometers = miles*1.61\n",
+    "kilometers_to_miles = kilometers*0.62\n",
+    "print(miles, \"miles is\", round(miles_to_kilometers, 2), \"kilometers\")\n",
+    "print(kilometers, \"kilometers is\", round(kilometers_to_miles, 2), \"miles\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9da29e7a-53d0-4e35-9b3d-10887451468e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "7.38 miles is 11.88 kilometers\n",
+    "12.25 kilometers is 7.59 miles"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d82cd234-06cd-4a16-bd81-b6223e5ad83a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 4\n",
+    "Подивіться код у редакторі: він читає “плаваюче” значення, поміщає його у змінну з ім’ям x, і друкує значення змінної з ім’ям y. Ваше завдання - завершити код, щоб оцінити такий вираз:\n",
+    "3x^3-2x^2+3^x-1\n",
+    "Результат має бути присвоєний y."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "67f78c61-aff3-4ff2-8670-a6d952c264bb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x1 = input(\"Введіть свій x для четвертого завдання: \")\n",
+    "x1 = float(x1)\n",
+    "y = 3*math.cbrt(x1)-2*math.sqrt(x1)+math.pow(3, x1)-1\n",
+    "print(\"y =\", y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "80c28c14-0968-437d-9c7a-4be6de13793d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 5\n",
+    "Код редактора містить коментарі. Спробуйте покращити його: додайте або видаліть коментарі там, де ви вважаєте це доречним (так, іноді видалення коментаря може зробити код більш читабельним) і змініть імена змінних там, де, на вашу думку, це покращить розуміння коду."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "796f2aec-7a59-4b06-ba19-5b48361160db",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a = 2 #Number of hours\n",
+    "seconds = 3600 #Number of seconds in 1 hour\n",
+    "print(\"Hours: \", a) #Printing the number of hours"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "481b0dbd-a12c-418a-9d96-42bc1c518be7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Hours: 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3642ad4b-6820-4e1d-81c7-144e0107f810",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 6\n",
+    "Ваше завдання – завершити код, щоб отримати результати чотирьох основних арифметичних операцій.\n",
+    "\n",
+    "Результати мають бути виведені у консолі.\n",
+    "\n",
+    "Можливо, ви не зможете захистити код від користувача, який хоче ділити на нуль. Пізніше ми взнаємо, як це зробити."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7cb31437-b851-483e-9a44-03b95c871c93",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=float(input(\"Введіть змінну a для шостого завдання: \"))\n",
+    "b=float(input(\"Введіть змінну b для шостого завдання: \"))\n",
+    "print(\"a + b = \", a+b)\n",
+    "print(\"a i b = \", a-b)\n",
+    "print(\"a * b = \", a*b)\n",
+    "print(\"a / b = \", a/b)\n",
+    "print(\"Is that all? Not even close\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e712705a-b206-43c0-aa12-943f58883944",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Введіть змінну a для шостого завдання: >? 4\n",
+    "Введіть змінну b для шостого завдання: >? 8\n",
+    "a + b =  12.0\n",
+    "a i b =  -4.0\n",
+    "a * b =  32.0\n",
+    "a / b =  0.5\n",
+    "Is that all? Not even close"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a8fd3fd8-1610-4133-92d3-da56aed767dc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 7\n",
+    "Ваше завдання – завершити код, щоб оцінити такий вираз.\n",
+    "Результат має бути присвоєний y."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "36d706c4-4cbb-452c-8a1b-f0ca791e30b8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def fractal_division(x, depth):\n",
+    "    if depth == 0:\n",
+    "        return x\n",
+    "    else:\n",
+    "        return x + 1 / fractal_division(x, depth - 1)\n",
+    "x2 = float(input(\"Введіть свій x для сьомого завдання: \"))\n",
+    "depth = int(input(\"Введіть кількість ітерацій для сьомого завдання: \")) #Yep, I modified this so U can choose the number of iterations of that.. interesting sequence\n",
+    "y = 1 / fractal_division(x2, depth)\n",
+    "print(f\"y = {y}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4a59b653-11bf-4482-b7a0-d11385add9b5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Введіть свій x для сьомого завдання: >? -5\n",
+    "Введіть кількість ітерацій для сьомого завдання: >? 1\n",
+    "y = -0.1923076923076923"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0051c546-877f-4ae9-9abd-322b3f52bf9e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "### Завдання 8\n",
+    "Ваше завдання - підготувати простий код, здатний порахувати час закінчення періоду часу, вираженого в кількості хвилин (воно може бути як завгодно великим). Час початку вказується у вигляді пари годин (0..23) та хвилин (0..59). Результат повинен бути надрукований на консолі.\n",
+    "\n",
+    "Наприклад, якщо подія починається о 12:17 і триває 59 хвилин, вона закінчується о 13:16."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "432fd84b-e45e-4dc8-8558-a184a466d075",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "hours = int(input(\"Введіть години для восьмого завдання (від 0 до 23): \"))\n",
+    "minutes = int(input(\"Введіть хвилини для восьмого завдання (від 0 до 59): \"))\n",
+    "add_minutes = int(input(\"Введіть довжину події у хвилинах для восьмого завдання: \"))\n",
+    "total_minutes = minutes + add_minutes\n",
+    "new_hours = (hours + total_minutes // 60) % 24\n",
+    "new_minutes = total_minutes % 60\n",
+    "print(f\"Підсумковий час: {new_hours:02d}:{new_minutes:02d}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "002e05bc-3705-45b4-85a1-8414ce502f0c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Введіть години для восьмого завдання (від 0 до 23): >? 12\n",
+    "Введіть хвилини для восьмого завдання (від 0 до 59): >? 17\n",
+    "Введіть довжину події у хвилинах для восьмого завдання: >? 59\n",
+    "Підсумковий час: 13:16"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eb317590-50a7-4a50-a900-22520345ec3f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Введіть години для восьмого завдання (від 0 до 23): >? 23\n",
+    "Введіть хвилини для восьмого завдання (від 0 до 59): >? 58\n",
+    "Введіть довжину події у хвилинах для восьмого завдання: >? 642\n",
+    "Підсумковий час: 10:40"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "700775d4-13d1-4873-a15a-6b6f280e486a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Введіть години для восьмого завдання (від 0 до 23): >? 0\n",
+    "Введіть хвилини для восьмого завдання (від 0 до 59): >? 1\n",
+    "Введіть довжину події у хвилинах для восьмого завдання: >? 2939\n",
+    "Підсумковий час: 01:00"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e6100f96-e9bc-425f-b34f-6259ad2649a5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## Контрольні запитання"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d1ca22e5-23c3-4ac6-a310-775c33fb9966",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "1. Який вивод наступного фрагмента?\n",
+    "x = int(input(\"Enter a number: \")) # the user enters 2\n",
+    "print(x * \"5\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c4ead13e-17cc-41bc-8295-c7a7187b1f54",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Enter a number: >? 10\n",
+    "5555555555"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "879f788d-8864-4165-8add-7a686c3c9de7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "2. Який очікуваний результат наступного фрагмента?\n",
+    "x = input(\"Enter a number: \")  # the user enters 2\n",
+    "print(type (x))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "14cd724d-7aab-48d3-a79e-51a7afdf0df6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Enter a number: >? 10\n",
+    "<class 'str'>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ae0cdd0b-35f0-4c4c-9c9f-cf157e05b9af",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## References"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f7ba6612-fd64-4354-9c33-45c277410b95",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "1. Методичні вказівки\n",
+    "2. https://git-scm.com/book/en/v2\n",
+    "3. https://data-visualization-blog.netlify.app/posts/quarto/"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
